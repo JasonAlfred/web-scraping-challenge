@@ -1,0 +1,21 @@
+body {
+    background: #ffffff;
+}
+
+.individual_area {
+    padding: 20px;
+    background-color: blue;
+}
+
+
+p {
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: rgb(0, 0, 0);
+}
+.tiny_text{
+    font-size: 0.6em;
+    color: black;
+    text-align: right
+}
