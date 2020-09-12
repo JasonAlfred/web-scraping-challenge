@@ -1,21 +1,14 @@
-body {
-    background: #ffffff;
+.header_box{
+    padding: 30px;
+    background-color: rgb(202, 134, 88);
 }
 
-.individual_area {
-    padding: 20px;
-    background-color: blue;
+.center{
+    text-align: center;
 }
 
-
-p {
-    font-size: 1.1em;
-    font-weight: 300;
-    line-height: 1.7em;
-    color: rgb(0, 0, 0);
-}
-.tiny_text{
-    font-size: 0.6em;
-    color: black;
-    text-align: right
+.button{
+    padding:5px;
+    background-color: rgb(12, 81, 209);
+    color: white;
 }

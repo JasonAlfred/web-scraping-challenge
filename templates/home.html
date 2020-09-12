@@ -5,22 +5,80 @@
     <title>{{title}}</title>
     <meta charset="utf-8">
     <meta name="description" content={{description}}>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../static/styles.css">
-    <!-- <link rel="stylesheet" media="screen and (max-width: 1136px)" href="static/smallscreen.css"> -->
-
  </head>
 
   <body>
-        <h1>{{title}}</h1>
-        <p>{{description}}</p>
-        <p>Sample landing Page</p>
-        <a href="{{ url_for('individual_view') }}">Click here to view Individual Family Data</a>
+    <div class = "container">
+        <div class="row, justify-content-center, header_box">
+          <div class="col md-12 text-center">
+            <h1 class = "center">{{title}}</h1>
+            <a class="btn btn-primary, button" href='/scrape' role="button">
+              Scrape New Data</a>
+          </div>
+        </div>
 
+        <br><br>
+
+        <div class = "row">
+          <div class = "col>">
+            <h2>Latest Mars News</h2>
+            <p>{{article_title}}</p>
+            <p>{{article_paragraph}}</p>
+          </div>
+        </div>
+
+        <br><br>
+
+        <div class = "row">
+          <div class = "col md-8>">
+            <h2>Featured Mars Image</h2>
+            <img src={{mars_image}} alt="Featured Mars Image" style="width:665px;height:420px;">
+          </div>
+
+
+          <div class = "col md-4>">
+            <h4>Mars Facts</h4>
+            {{mars_data_table|safe}}
+          </div>
+        </div>
+        <br><br>
+        <div class="row, justify-content-center">
+          <div class="col md-12 text-center">
+            <h2 class = "center">Mars Hemispheres</h2>
+            <hr>
+          </div>
+        </div>
+
+        <div class = "row">
+
+          <div class = "col md-6, center">
+            <img src={{hemisphere_url1}} alt={{hemisphere_title1}} style = "width:400px; height: 400px"><br>
+            <strong>{{hemisphere_title1}}</strong>
+          </div>
+          <div class = "col md-6, center">
+            <img src={{hemisphere_url2}} alt={{hemisphere_title2}} style = "width:400px; height: 400px"><br>
+            <strong>{{hemisphere_title2}}</strong>
+          </div>
+        </div>
+        <br><br>
+
+        <div class = "row">
+
+          <div class = "col md-6, center">
+            <img src={{hemisphere_url3}} alt={{hemisphere_title3}} style = "width:400px; height: 400px"><br>
+            <strong>{{hemisphere_title3}}</strong>
+          </div>
+          <div class = "col md-6, center">
+            <img src={{hemisphere_url4}} alt={{hemisphere_title4}} style = "width:400px; height: 400px"><br>
+            <strong>{{hemisphere_title4}}</strong>
+          </div>
+        </div>
+    </div> 
+    <br><br>        <br><br>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="../static/nav_scripts.js"></script>
 </body>
 </html>
